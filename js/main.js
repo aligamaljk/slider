@@ -3,6 +3,8 @@
 let menu = document.querySelector(".menu-icon")
 let nav = document.querySelector("nav")
 let btnclose = document.querySelector(".close")
+let links = Array.from(document.querySelectorAll(".nav-links a"))
+// console.log(nav);
 menu.onclick = function (){
     nav.classList.add("open")
 }
@@ -10,6 +12,11 @@ btnclose.onclick = function () {
     this.parentElement.classList.remove("open")
     // console.log(this.parentElement);
 }
+links.forEach((e)=>{
+    e.onclick = ()=>{
+        nav.classList.remove("open")
+    }
+})
 document.onkeyup = function (e) {
     // console.log(e);
     if(e.key === "Enter"){
