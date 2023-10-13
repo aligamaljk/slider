@@ -134,3 +134,29 @@ function removeAllActive(){
 }
 
 // End Slider
+
+// Start Scroll To Top
+
+
+let up = document.querySelector(".up")
+// console.log(up);
+
+window.onscroll = ()=>{
+    // console.log(this.scrollY);
+    // if(this.scrollY >= 100){
+    //     up.classList.add("show")
+    // }else{
+    //     up.classList.remove("show")
+    // }
+    this.scrollY >= 100 ? up.classList.add("show") : up.classList.remove("show")
+}
+
+up.onclick = ()=>{
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    })
+}
+
+
+// End Scroll To Top
